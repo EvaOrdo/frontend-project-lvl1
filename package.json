@@ -2,7 +2,8 @@
   "name": "frontend-project-lvl1",
   "version": "1.0.0",
   "description": "My first project on Hexlet",
-  "main": "index.mjs",
+  "type": "module",
+  "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "NODE_ENV=production babel src --out-dir dist --source-maps inline",
@@ -22,7 +23,10 @@
     "@babel/cli": "^7.7.4",
     "@babel/core": "^7.7.4",
     "@babel/node": "^7.7.4",
-    "@babel/preset-env": "^7.7.4"
+    "@babel/preset-env": "^7.7.4",
+    "eslint": "^6.7.2",
+    "eslint-config-airbnb-base": "^14.0.0",
+    "eslint-plugin-import": "^2.19.1"
   },
   "files": [
     "dist"
@@ -31,6 +35,8 @@
     "brain-games": "dist/bin/brain-games.mjs"
   },
   "dependencies": {
+    "babel-eslint": "^10.0.3",
+    "eslint-plugin-babel": "^5.3.0",
     "readline-sync": "^1.4.10"
   }
 }
