@@ -17,40 +17,26 @@ export const getName = () => {
     return name;
 };
 
-// step 5 brain-games function
 
-export const brainGames = () => {
-    greeting();
-    getName();
-};
+export const getRandom = (num) => Math.floor(Math.random()*num);
 
-// step 5 using readlineSync lib to get user's answer
+// step 6 common logic for all brain-games: 
 
-export const getAnswer = () => {
-    return readlineSync.question('Your answer: ');
-};
-
-// step 5 brain-even function
-
-export const brainEven = () => {
-    greeting('Answer "yes" if the number is even, otherwise answer "no".');
-    const name = getName();
+export const makeGame = (rule, gameData) => {
+    console.log('Welcome to the Brain Games!');
+    const name = readlineSync.question('May I have your name? ');
+    console.log(`Hello, ${name}`);
+    console.log(rule);
     let i = 0;
-    for (; i < 3; i++) {
-        const number = Math.floor(Math.random(0, 1) * 100);
-        console.log(`Question: ${number}`);
-        const answer = getAnswer();
-        if (number % 2 === 0 && answer === 'yes') {
+    for (; i < 3; i+=1) {
+        let pair = gameData();
+        console.log(`Question: ${pair[0]}`);
+        let answer = readlineSync.question('Your answer: ');
+        if (answer === pair[1]) {
             console.log('Correct!');
             continue;
-        }
-        if (number % 2 !== 0 && answer === 'no') {
-            console.log('Correct!');
-            continue;
-        }
-        else {
-            console.log(`${answer} is wrong answer ;(. Correct answer was 'no'.
-        Let's try again, ${name}`);
+        } else {
+            console.log(`"${answer}" is wrong answer ;(. Correct answer was "${pair[1]}". Let's try again, ${name}`);
             break;
         }
     }
@@ -58,4 +44,3 @@ export const brainEven = () => {
         console.log(`Congratulations, ${name}`);
     }
 };
-
