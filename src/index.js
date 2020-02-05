@@ -2,11 +2,8 @@ import readlineSync from 'readline-sync';
 
 // step 1 greeting (on step 5 added rule as arg)
 
-export const greeting = (rule) => {
+export const greeting = () => {
     console.log('Welcome to the Brain Games!');
-    if (rule) {
-        console.log(rule);
-    }
 };
 
 // step 3 using readlineSync library to get user's name
@@ -17,15 +14,13 @@ export const getName = () => {
     return name;
 };
 
-
 export const getRandom = (num) => Math.floor(Math.random()*num);
 
 // step 6 common logic for all brain-games: 
 
 export const makeGame = (rule, gameData) => {
-    console.log('Welcome to the Brain Games!');
-    const name = readlineSync.question('May I have your name? ');
-    console.log(`Hello, ${name}`);
+    greeting();
+    getName();
     console.log(rule);
     let i = 0;
     for (; i < 3; i+=1) {
