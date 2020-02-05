@@ -7,3 +7,18 @@
 ### brain-even 
 
 <a href="https://asciinema.org/a/Pq4VacKauR9Y8HMuT2ttPEuva" target="_blank"><img src="https://asciinema.org/a/Pq4VacKauR9Y8HMuT2ttPEuva.svg" /></a>
+
+### brain-calc
+
+
+
+### brain-gcd
+
+
+
+### brain-progression
+
+
+
+### brain-prime
+
