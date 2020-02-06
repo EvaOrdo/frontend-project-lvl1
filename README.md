@@ -4,9 +4,13 @@
 <a href="https://codeclimate.com/github/codeclimate/codeclimate/test_coverage"><img src="https://api.codeclimate.com/v1/badges/a99a88d28ad37a79dbf6/test_coverage" /></a>
 [![Build Status](https://travis-ci.org/EvaOrdo/frontend-project-lvl1.svg?branch=master)](https://travis-ci.org/EvaOrdo/frontend-project-lvl1)
 
+### install
+
+<a href="https://asciinema.org/a/298736" target="_blank"><img src="https://asciinema.org/a/298736.svg" /></a>
+
 ### brain-even 
 
-<a href="https://asciinema.org/a/298725" target="_blank"><img src="https://asciinema.org/a/298725.svg" /></a>
+<a href="https://asciinema.org/a/298737" target="_blank"><img src="https://asciinema.org/a/298737.svg" /></a>
 
 ### brain-calc
 
