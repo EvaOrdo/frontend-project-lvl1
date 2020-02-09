@@ -1,16 +1,25 @@
-import { getRandom, makeGame } from '../index.js';
+import getRandom from '../index.js';
+import makeGame from '../utils.js';
 
 const calcData = () => {
-  const sign = '+-*';
+  const sign = '+-*'[getRandom(3)];
   const a = getRandom(100);
   const b = getRandom(100);
-  const question = `${a} ${sign[getRandom(3)]} ${b}`;
-  const solution = eval(question);
-  const gameData = [];
-  gameData.push(question);
-  gameData.push(solution.toString());
+  const question = `${a} ${sign} ${b}`;
+  let solution;
+  if (sign === '+') {
+    solution = a + b;
+  } else if (sign === '-') {
+    solution = a - b;
+  } else {
+    solution = a * b;
+  }
+  const gameData = [question, solution.toString()];
   return gameData;
 };
-export const brainCalc = () => {
-  makeGame('What is the result of the expression?', calcData);
+const brainCalc = () => {
+  const rule = 'What is the result of the expression?';
+  makeGame(rule, calcData);
 };
+
+export default brainCalc;

@@ -1,4 +1,5 @@
-import { getRandom, makeGame } from '../index.js';
+import getRandom from '../index.js';
+import makeGame from '../utils.js';
 
 const evenData = () => {
   const question = getRandom(100);
@@ -8,12 +9,13 @@ const evenData = () => {
   } else {
     solution = 'no';
   }
-  const gameData = [];
-  gameData.push(question);
-  gameData.push(solution);
+  const gameData = [question, solution];
   return gameData;
 };
 
-export const brainEven = () => {
-  makeGame('Answer "yes" if the number is even, otherwise answer "no".', evenData);
+const brainEven = () => {
+  const rule = 'Answer "yes" if the number is even, otherwise answer "no".';
+  makeGame(rule, evenData);
 };
+
+export default brainEven;

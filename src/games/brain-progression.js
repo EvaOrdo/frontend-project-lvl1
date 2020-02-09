@@ -1,4 +1,5 @@
-import { getRandom, makeGame } from '../index.js';
+import getRandom from '../index.js';
+import makeGame from '../utils.js';
 
 const progressionData = () => {
   let num = getRandom(20);
@@ -12,16 +13,17 @@ const progressionData = () => {
       solution = num.toString();
       num += difference;
     } else {
-      question += num + ' ';
+      question += `${num} `;
       num += difference;
     }
   }
-  const gameData = [];
-  gameData.push(question);
-  gameData.push(solution);
+  const gameData = [question, solution];
   return gameData;
 };
 
-export const brainProgression = () => {
-  makeGame('What number is missing in the progression?', progressionData);
+const brainProgression = () => {
+  const rule = 'What number is missing in the progression?';
+  makeGame(rule, progressionData);
 };
+
+export default brainProgression;

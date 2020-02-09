@@ -1,5 +1,5 @@
-#! /home/ann/.nvm/versions/node/v13.3.0/bin/node
+#! /usr/bin/env node
 
-import { brainProgression } from '../games/brain-progression.js';
+import brainProgression from '../games/brain-progression.js';
 
 brainProgression();
