@@ -4,7 +4,7 @@ import makeGame from '../index.js';
 const getPrimeData = () => {
   const question = getRandom(1, 100);
 
-  return [question, isPrime(question) ? yes : no];
+  return [question, isPrime(question) ? 'yes' : 'no'];
 };
 
 const brainPrime = () => {
