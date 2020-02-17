@@ -4,7 +4,7 @@ import makeGame from '../index.js';
 const getEvenData = () => {
   const question = getRandom(1, 100);
  
-  return [question, isEven(question) ? yes : no];
+  return [question, isEven(question) ? 'yes' : 'no'];
 };
 
 const brainEven = () => {
