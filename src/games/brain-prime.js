@@ -1,5 +1,5 @@
-import getRandom from '../index.js';
-import makeGame from '../utils.js';
+import getRandom from '../utils.js';
+import makeGame from '../index.js';
 
 const primeData = () => {
   const question = getRandom(100);
