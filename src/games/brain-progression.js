@@ -1,4 +1,4 @@
-import getRandom from '../utils.js';
+import { getRandom } from '../utils.js';
 import makeGame from '../index.js';
 
 const getProgressionData = () => {
@@ -9,16 +9,15 @@ const getProgressionData = () => {
   let solution;
   for (let i = 0; i < 10; i += 1) {
     if (i === missingNumPosition) {
-      question += '.. ';
+      question = `${question} ..`;
       solution = num.toString();
       num += difference;
     } else {
-      question += `${num} `;
+      question = `${question} ${num} `;
       num += difference;
     }
   }
-  const gameData = [question, solution];
-  return gameData;
+  return [question, solution];
 };
 
 const brainProgression = () => {

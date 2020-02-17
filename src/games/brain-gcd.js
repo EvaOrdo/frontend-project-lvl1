@@ -1,20 +1,11 @@
-import getRandom from '../utils.js';
+import { getRandom, getGcd } from '../utils.js';
 import makeGame from '../index.js';
 
 const getGcdData = () => {
   let a = getRandom(1, 100);
   let b = getRandom(1, 100);
   const question = `${a} ${b}`;
-  while (a !== b) {
-    if (a > b) {
-      a -= b;
-    } else {
-      b -= a;
-    }
-  }
-  const solution = a;
-  const gameData = [question, solution.toString()];
-  return gameData;
+  return [question, getGcd(a, b)];
 };
 
 const brainGCD = () => {

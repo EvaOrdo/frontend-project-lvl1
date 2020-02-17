@@ -1,4 +1,4 @@
-import getRandom from '../utils.js';
+import { getRandom, calcExpression } from '../utils.js';
 import makeGame from '../index.js';
 
 const getCalcData = () => {
@@ -6,16 +6,8 @@ const getCalcData = () => {
   const a = getRandom(1, 100);
   const b = getRandom(1, 100);
   const question = `${a} ${sign} ${b}`;
-  let solution;
-  if (sign === '+') {
-    solution = a + b;
-  } else if (sign === '-') {
-    solution = a - b;
-  } else {
-    solution = a * b;
-  }
-  const gameData = [question, solution.toString()];
-  return gameData;
+  
+  return [question, calcExpression(a, b, sign)];
 };
 const brainCalc = () => {
   const rule = 'What is the result of the expression?';
