@@ -2,7 +2,7 @@ import getRandom from '../utils.js';
 import makeGame from '../index.js';
 
 const primeData = () => {
-  const question = getRandom(100);
+  const question = getRandom(1, 100);
 
   const isPrime = (num) => {
     for (let i = 2; i < Math.sqrt(num); i += 1) {

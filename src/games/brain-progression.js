@@ -2,13 +2,13 @@ import getRandom from '../utils.js';
 import makeGame from '../index.js';
 
 const progressionData = () => {
-  let num = getRandom(20);
-  const difference = getRandom(10);
-  const iter = getRandom(10);
+  let num = getRandom(1, 20);
+  const difference = getRandom(1, 10);
+  const missingNumPosition = getRandom(1, 9);
   let question = '';
   let solution;
   for (let i = 0; i < 10; i += 1) {
-    if (i === iter) {
+    if (i === missingNumPosition) {
       question += '.. ';
       solution = num.toString();
       num += difference;

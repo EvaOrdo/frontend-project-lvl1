@@ -2,7 +2,7 @@ import getRandom from '../utils.js';
 import makeGame from '../index.js';
 
 const evenData = () => {
-  const question = getRandom(100);
+  const question = getRandom(1, 100);
   let solution;
   if (question % 2 === 0) {
     solution = 'yes';

@@ -2,9 +2,9 @@ import getRandom from '../utils.js';
 import makeGame from '../index.js';
 
 const calcData = () => {
-  const sign = '+-*'[getRandom(3)];
-  const a = getRandom(100);
-  const b = getRandom(100);
+  const sign = '+-*'[getRandom(0, 3)];
+  const a = getRandom(1, 100);
+  const b = getRandom(1, 100);
   const question = `${a} ${sign} ${b}`;
   let solution;
   if (sign === '+') {

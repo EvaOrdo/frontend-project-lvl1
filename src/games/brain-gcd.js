@@ -2,8 +2,8 @@ import getRandom from '../utils.js';
 import makeGame from '../index.js';
 
 const gcdData = () => {
-  let a = getRandom(100);
-  let b = getRandom(100);
+  let a = getRandom(1, 100);
+  let b = getRandom(1, 100);
   const question = `${a} ${b}`;
   while (a !== b) {
     if (a > b) {
