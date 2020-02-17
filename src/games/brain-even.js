@@ -1,7 +1,7 @@
 import getRandom from '../utils.js';
 import makeGame from '../index.js';
 
-const evenData = () => {
+const getEvenData = () => {
   const question = getRandom(1, 100);
   let solution;
   if (question % 2 === 0) {
@@ -15,7 +15,7 @@ const evenData = () => {
 
 const brainEven = () => {
   const rule = 'Answer "yes" if the number is even, otherwise answer "no".';
-  makeGame(rule, evenData);
+  makeGame(rule, getEvenData);
 };
 
 export default brainEven;

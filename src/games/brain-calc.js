@@ -1,7 +1,7 @@
 import getRandom from '../utils.js';
 import makeGame from '../index.js';
 
-const calcData = () => {
+const getCalcData = () => {
   const sign = '+-*'[getRandom(0, 3)];
   const a = getRandom(1, 100);
   const b = getRandom(1, 100);
@@ -19,7 +19,7 @@ const calcData = () => {
 };
 const brainCalc = () => {
   const rule = 'What is the result of the expression?';
-  makeGame(rule, calcData);
+  makeGame(rule, getCalcData);
 };
 
 export default brainCalc;

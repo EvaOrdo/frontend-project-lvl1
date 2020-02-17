@@ -1,7 +1,7 @@
 import getRandom from '../utils.js';
 import makeGame from '../index.js';
 
-const progressionData = () => {
+const getProgressionData = () => {
   let num = getRandom(1, 20);
   const difference = getRandom(1, 10);
   const missingNumPosition = getRandom(1, 9);
@@ -23,7 +23,7 @@ const progressionData = () => {
 
 const brainProgression = () => {
   const rule = 'What number is missing in the progression?';
-  makeGame(rule, progressionData);
+  makeGame(rule, getProgressionData);
 };
 
 export default brainProgression;

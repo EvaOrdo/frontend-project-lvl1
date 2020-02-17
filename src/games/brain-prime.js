@@ -1,7 +1,7 @@
 import getRandom from '../utils.js';
 import makeGame from '../index.js';
 
-const primeData = () => {
+const getPrimeData = () => {
   const question = getRandom(1, 100);
 
   const isPrime = (num) => {
@@ -25,7 +25,7 @@ const primeData = () => {
 
 const brainPrime = () => {
   const rule = 'Answer "yes" if given number is prime. Otherwise answer "no"';
-  makeGame(rule, primeData);
+  makeGame(rule, getPrimeData);
 };
 
 export default brainPrime;
