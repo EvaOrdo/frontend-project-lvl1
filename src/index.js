@@ -6,13 +6,13 @@ const makeGame = (rule, getGameData) => {
   console.log(`Hello, ${name}`);
   console.log(rule);
   for (let i = 0; i < 3; i += 1) {
-    const pair = getGameData();
-    console.log(`Question: ${pair[0]}`);
+    const [question, solution] = getGameData();
+    console.log(`Question: ${question}`);
     const answer = readlineSync.question('Your answer: ');
-    if (answer === pair[1]) {
+    if (answer === solution) {
       console.log('Correct!');
     } else {
-      console.log(`"${answer}" is wrong answer ;(. Correct answer was "${pair[1]}". Let's try again, ${name}`);
+      console.log(`"${answer}" is wrong answer ;(. Correct answer was "${solution}". Let's try again, ${name}`);
       return;
     }
   }
