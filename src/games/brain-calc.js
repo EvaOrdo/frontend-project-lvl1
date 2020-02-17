@@ -6,7 +6,7 @@ const getCalcData = () => {
   const a = getRandom(1, 100);
   const b = getRandom(1, 100);
   const question = `${a} ${sign} ${b}`;
-  
+
   return [question, calcExpression(a, b, sign)];
 };
 const brainCalc = () => {
