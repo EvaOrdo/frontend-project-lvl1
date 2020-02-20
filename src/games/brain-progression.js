@@ -1,27 +1,28 @@
-import { getRandom } from '../utils.js';
+import getRandom from '../utils.js';
 import makeGame from '../index.js';
 
 const getProgressionData = () => {
-  let num = getRandom(1, 20);
+  const first = getRandom(1, 20);
   const difference = getRandom(1, 10);
   const missingNumPosition = getRandom(1, 9);
   let question = '';
   let solution;
-  for (let i = 0; i < 10; i += 1) {
+  const sequenceLength = 10;
+
+  for (let i = 0; i < sequenceLength; i += 1) {
+    let el = first + i * difference;
     if (i === missingNumPosition) {
-      question = `${question} ..`;
-      solution = num.toString();
-      num += difference;
-    } else {
-      question = `${question} ${num} `;
-      num += difference;
+      solution = el;
+      el = '..';
     }
+    question = `${question} ${el}`;
   }
   return [question, solution];
 };
 
+const rule = 'What number is missing in the progression?';
+
 const brainProgression = () => {
-  const rule = 'What number is missing in the progression?';
   makeGame(rule, getProgressionData);
 };
 

@@ -5,11 +5,12 @@ const makeGame = (rule, getGameData) => {
   const name = readlineSync.question('May I have your name? ');
   console.log(`Hello, ${name}`);
   console.log(rule);
-  for (let i = 0; i < 3; i += 1) {
+  const numberOfQuestions = 3;
+  for (let i = 0; i < numberOfQuestions; i += 1) {
     const [question, solution] = getGameData();
     console.log(`Question: ${question}`);
     const answer = readlineSync.question('Your answer: ');
-    if (answer === solution) {
+    if (answer === solution.toString()) {
       console.log('Correct!');
     } else {
       console.log(`"${answer}" is wrong answer ;(. Correct answer was "${solution}". Let's try again, ${name}`);
