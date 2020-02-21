@@ -13,14 +13,16 @@ const calcExpression = (num1, num2, sign) => {
       return false;
   }
 };
+
+const stringOfSigns = '+-*';
+
 const getGameData = () => {
-  const stringOfSigns = '+-*';
   const sign = stringOfSigns[getRandom(0, stringOfSigns.length - 1)];
   const a = getRandom(1, 100);
   const b = getRandom(1, 100);
   const question = `${a} ${sign} ${b}`;
-
-  return [question, calcExpression(a, b, sign)];
+  const rightAnswer = calcExpression(a, b, sign);
+  return [question, rightAnswer];
 };
 
 const rule = 'What is the result of the expression?';

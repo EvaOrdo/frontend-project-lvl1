@@ -10,8 +10,8 @@ const isPrime = (num) => {
 };
 const getGameData = () => {
   const question = getRandom(1, 100);
-  const solution = isPrime(question) ? 'yes' : 'no';
-  return [question, solution];
+  const rightAnswer = isPrime(question) ? 'yes' : 'no';
+  return [question, rightAnswer];
 };
 
 const rule = 'Answer "yes" if given number is prime. Otherwise answer "no"';

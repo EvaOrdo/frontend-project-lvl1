@@ -17,8 +17,8 @@ const getGcdData = () => {
   const a = getRandom(1, 100);
   const b = getRandom(1, 100);
   const question = `${a} ${b}`;
-  const answer = getGcd(a, b);
-  return [question, answer];
+  const rightAnswer = getGcd(a, b);
+  return [question, rightAnswer];
 };
 
 const rule = 'Find the greatest common divisor of given numbers.';

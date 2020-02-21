@@ -8,7 +8,7 @@ const getGameData = () => {
   const difference = getRandom(1, 10);
   const missingNumPosition = getRandom(1, 9);
   let question = '';
-  const solution = first + missingNumPosition * difference;
+  const rightAnswer = first + missingNumPosition * difference;
 
   for (let i = 0; i < sequenceLength; i += 1) {
     let el = first + i * difference;
@@ -17,7 +17,7 @@ const getGameData = () => {
     }
     question = `${question} ${el}`;
   }
-  return [question, solution.toString()];
+  return [question, rightAnswer.toString()];
 };
 
 const rule = 'What number is missing in the progression?';
