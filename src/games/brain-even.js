@@ -1,21 +1,17 @@
 import getRandom from '../utils.js';
 import makeGame from '../index.js';
 
-const isEven = (num) => {
-  if (num % 2 === 0) {
-    return 'yes';
-  } return 'no';
-};
-const getEvenData = () => {
+const isEven = (num) => num % 2 === 0;
+const getGameData = () => {
   const question = getRandom(1, 100);
-  const answer = isEven(question);
+  const answer = isEven(question) ? 'yes' : 'no';
   return [question, answer];
 };
 
 const rule = 'Answer "yes" if the number is even, otherwise answer "no".';
 
-const brainEven = () => {
-  makeGame(rule, getEvenData);
+const runBrainEven = () => {
+  makeGame(rule, getGameData);
 };
 
-export default brainEven;
+export default runBrainEven;

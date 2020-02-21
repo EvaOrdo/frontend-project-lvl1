@@ -2,6 +2,10 @@
   "name": "frontend-project-lvl1",
   "version": "1.0.1",
   "description": "My first project on Hexlet",
+  "keywords": [
+    "brain-games",
+    "hexlet"
+  ],
   "type": "module",
   "main": "src/index.js",
   "scripts": {
@@ -20,7 +24,6 @@
   },
   "homepage": "https://github.com/EvaOrdo/frontend-project-lvl1#readme",
   "devDependencies": {
-    "babel-eslint": "^10.0.3",
     "eslint": "^6.7.2",
     "eslint-config-airbnb-base": "^14.0.0",
     "eslint-plugin-import": "^2.19.1"
@@ -29,12 +32,12 @@
     "dist"
   ],
   "bin": {
-    "brain-games": "src/bin/brain-games.js",
-    "brain-even": "src/bin/brain-even.js",
-    "brain-calc": "src/bin/brain-calc.js",
-    "brain-gcd": "src/bin/brain-gcd.js",
-    "brain-progression": "src/bin/brain-progression.js",
-    "brain-prime": "src/bin/brain-prime.js"
+    "brain-games": "bin/brain-games.js",
+    "brain-even": "bin/brain-even.js",
+    "brain-calc": "bin/brain-calc.js",
+    "brain-gcd": "bin/brain-gcd.js",
+    "brain-progression": "bin/brain-progression.js",
+    "brain-prime": "bin/brain-prime.js"
   },
   "dependencies": {
     "readline-sync": "^1.4.10"

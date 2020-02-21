@@ -4,17 +4,18 @@ import makeGame from '../index.js';
 const calcExpression = (num1, num2, sign) => {
   switch (sign) {
     case '+':
-      return num1 + num2;
+      return (num1 + num2).toString();
     case '-':
-      return num1 - num2;
+      return (num1 - num2).toString();
     case '*':
-      return num1 * num2;
+      return (num1 * num2).toString();
     default:
       return false;
   }
 };
-const getCalcData = () => {
-  const sign = '+-*'[getRandom(0, 3)];
+const getGameData = () => {
+  const stringOfSigns = '+-*';
+  const sign = stringOfSigns[getRandom(0, stringOfSigns.length - 1)];
   const a = getRandom(1, 100);
   const b = getRandom(1, 100);
   const question = `${a} ${sign} ${b}`;
@@ -24,8 +25,8 @@ const getCalcData = () => {
 
 const rule = 'What is the result of the expression?';
 
-const brainCalc = () => {
-  makeGame(rule, getCalcData);
+const runBrainCalc = () => {
+  makeGame(rule, getGameData);
 };
 
-export default brainCalc;
+export default runBrainCalc;
