@@ -17,7 +17,7 @@ const getGameData = () => {
     }
     question = `${question} ${el}`;
   }
-  return [question, solution];
+  return [question, solution.toString()];
 };
 
 const rule = 'What number is missing in the progression?';
