@@ -1,23 +1,31 @@
-name: CI
+name: Node CI
 
-on: 
+on:
   - push
-  - pull_request  
+  - pull_request
 
 jobs:
   build:
 
     runs-on: ubuntu-latest
 
+    strategy:
+      matrix:
+        node-version: [13.x]
+
     steps:
-    - uses: actions/checkout@v2
-    - name: Run a one-line script
-      run: echo Hello, world!
-      env:
-        CI: true
-    - name: Run linter
-      run: |
+      - uses: actions/checkout@v1
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v1
+        with:
+          node-version: ${{ matrix.node-version }}
+      - name: npm install, build
+        run: |
+          make install
+          make build
+        env:
+          CI: true
+      - name: Run linter
+        run: |
           make lint
-
-
 
