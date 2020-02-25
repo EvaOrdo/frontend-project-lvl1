@@ -2,9 +2,7 @@
 
 <a href="https://codeclimate.com/github/EvaOrdo/frontend-project-lvl1/maintainability"><img src="https://api.codeclimate.com/v1/badges/a8eb6c89678cfd29ee8a/maintainability" /></a>
 
-[![Build Status](https://travis-ci.org/EvaOrdo/frontend-project-lvl1.svg?branch=master)](https://travis-ci.org/EvaOrdo/frontend-project-lvl1)
-
-![](https://github.com/EvaOrdo/frontend-project-lvl1/workflows/CI/badge.svg)
+[![CI](https://github.com/EvaOrdo/frontend-project-lvl1/workflows/CI/badge.svg)](https://github.com/EvaOrdo/frontend-project-lvl1/actions)
 
 ### install
 
