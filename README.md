@@ -4,6 +4,9 @@
 
 [![Build Status](https://travis-ci.org/EvaOrdo/frontend-project-lvl1.svg?branch=master)](https://travis-ci.org/EvaOrdo/frontend-project-lvl1)
 
+![](https://github.com/EvaOrdo/frontend-project-lvl1/workflows/.github/workflows/main.yml/badge.svg)
+
+
 ### install
 
 <a href="https://asciinema.org/a/298736" target="_blank"><img src="https://asciinema.org/a/298736.svg" /></a>
