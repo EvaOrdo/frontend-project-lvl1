@@ -11,20 +11,20 @@ const getGcd = (a, b) => {
       num2 -= num1;
     }
   }
-  return num1.toString();
+  return num1;
 };
 const getGcdData = () => {
   const a = getRandom(1, 100);
   const b = getRandom(1, 100);
   const question = `${a} ${b}`;
-  const rightAnswer = getGcd(a, b);
+  const rightAnswer = getGcd(a, b).toString();
   return [question, rightAnswer];
 };
 
-const rule = 'Find the greatest common divisor of given numbers.';
+const description = 'Find the greatest common divisor of given numbers.';
 
-const brainGCD = () => {
-  makeGame(rule, getGcdData);
+const runBrainGCD = () => {
+  makeGame(description, getGcdData);
 };
 
-export default brainGCD;
+export default runBrainGCD;

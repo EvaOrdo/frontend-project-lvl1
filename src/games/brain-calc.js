@@ -1,34 +1,34 @@
 import getRandom from '../utils.js';
 import makeGame from '../index.js';
 
-const calcExpression = (num1, num2, sign) => {
-  switch (sign) {
+const calculate = (num1, num2, operator) => {
+  switch (operator) {
     case '+':
-      return (num1 + num2).toString();
+      return (num1 + num2);
     case '-':
-      return (num1 - num2).toString();
+      return (num1 - num2);
     case '*':
-      return (num1 * num2).toString();
+      return (num1 * num2);
     default:
       return false;
   }
 };
 
-const stringOfSigns = '+-*';
+const stringOfOperators = '+-*';
 
 const getGameData = () => {
-  const sign = stringOfSigns[getRandom(0, stringOfSigns.length - 1)];
+  const operator = stringOfOperators[getRandom(0, stringOfOperators.length - 1)];
   const a = getRandom(1, 100);
   const b = getRandom(1, 100);
-  const question = `${a} ${sign} ${b}`;
-  const rightAnswer = calcExpression(a, b, sign);
+  const question = `${a} ${operator} ${b}`;
+  const rightAnswer = calculate(a, b, operator).toString();
   return [question, rightAnswer];
 };
 
-const rule = 'What is the result of the expression?';
+const description = 'What is the result of the expression?';
 
 const runBrainCalc = () => {
-  makeGame(rule, getGameData);
+  makeGame(description, getGameData);
 };
 
 export default runBrainCalc;
