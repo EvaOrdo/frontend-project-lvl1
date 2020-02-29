@@ -1,5 +1,5 @@
 import getRandom from '../utils.js';
-import makeGame from '../index.js';
+import runEngine from '../index.js';
 
 const calculate = (num1, num2, operator) => {
   switch (operator) {
@@ -14,10 +14,10 @@ const calculate = (num1, num2, operator) => {
   }
 };
 
-const stringOfOperators = '+-*';
+const operators = '+-*';
 
 const getGameData = () => {
-  const operator = stringOfOperators[getRandom(0, stringOfOperators.length - 1)];
+  const operator = operators[getRandom(0, operators.length - 1)];
   const a = getRandom(1, 100);
   const b = getRandom(1, 100);
   const question = `${a} ${operator} ${b}`;
@@ -28,7 +28,7 @@ const getGameData = () => {
 const description = 'What is the result of the expression?';
 
 const runBrainCalc = () => {
-  makeGame(description, getGameData);
+  runEngine(description, getGameData);
 };
 
 export default runBrainCalc;

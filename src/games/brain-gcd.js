@@ -1,7 +1,13 @@
 import getRandom from '../utils.js';
-import makeGame from '../index.js';
+import runEngine from '../index.js';
 
 const getGcd = (a, b) => {
+  if (a === 0) {
+    return b;
+  }
+  if (b === 0) {
+    return a;
+  }
   let num1 = a;
   let num2 = b;
   while (num1 !== num2) {
@@ -24,7 +30,7 @@ const getGcdData = () => {
 const description = 'Find the greatest common divisor of given numbers.';
 
 const runBrainGCD = () => {
-  makeGame(description, getGcdData);
+  runEngine(description, getGcdData);
 };
 
 export default runBrainGCD;

@@ -1,25 +1,25 @@
 import getRandom from '../utils.js';
-import makeGame from '../index.js';
+import runEngine from '../index.js';
 
-const sequenceLength = 10;
-const makeSequence = (startNum, diff, missingPosition) => {
-  let sequence = '';
-  for (let i = 0; i < sequenceLength; i += 1) {
+const progressionLength = 10;
+const makeProgression = (startNum, diff, missingPosition) => {
+  let progression = '';
+  for (let i = 0; i < progressionLength; i += 1) {
     let el = startNum + i * diff;
     if (i === missingPosition) {
       el = '..';
     }
-    sequence = `${sequence} ${el}`;
+    progression = `${progression} ${el}`;
   }
-  return sequence;
+  return progression.trim();
 };
 
 const getGameData = () => {
   const firstElement = getRandom(1, 20);
   const difference = getRandom(1, 10);
-  const missingElementPosition = getRandom(0, sequenceLength - 1);
+  const missingElementPosition = getRandom(0, progressionLength - 1);
 
-  const question = makeSequence(firstElement, difference, missingElementPosition);
+  const question = makeProgression(firstElement, difference, missingElementPosition);
   const rightAnswer = firstElement + missingElementPosition * difference;
 
   return [question, rightAnswer.toString()];
@@ -28,7 +28,7 @@ const getGameData = () => {
 const description = 'What number is missing in the progression?';
 
 const runBrainProgression = () => {
-  makeGame(description, getGameData);
+  runEngine(description, getGameData);
 };
 
 export default runBrainProgression;
