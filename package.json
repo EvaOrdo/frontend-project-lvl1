@@ -26,9 +26,6 @@
     "eslint-plugin-import": "^2.20.1",
     "eslint-config-airbnb-base": "^14.0.0"
   },
-  "files": [
-    "dist"
-  ],
   "bin": {
     "brain-games": "bin/brain-games.js",
     "brain-even": "bin/brain-even.js",
